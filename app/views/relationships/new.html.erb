@@ -1,0 +1,18 @@
+<!-- Use the Rails form_with helper to generate a form -->
+<h1>New Relationship</h1>
+<form method="post" action="/relationships">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Follower_id </label>
+    <input type="text" name="relationship[follower_id]">
+  </div>
+  <div>
+    <label>Leader_id </label>
+    <input type="text" name="relationship[leader_id]">
+  </div>
+  <div>
+    <input type="submit" value="Create relationship">
+  </div>
+</form>
+
+
