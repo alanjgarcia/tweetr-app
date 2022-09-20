@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   # get "/relationship" => "relationship#index"
   # post "/relationships" => "relationships#create"
   resources :relationships
+  # jbhhyb
 end
