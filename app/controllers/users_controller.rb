@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     @users = User.all
     render template: "users/index"
   end
-end
 
   def show
     @user = User.find_by(id: params[:id])
@@ -24,7 +23,7 @@ end
     )
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "/"
+      redirect_to "/users"
     else
       render :new, status: :unprocessable_entity
     end
