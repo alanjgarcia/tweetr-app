@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
   resources :tweets
   resources :users
+
+  resources :relationships
+  # jbhhyb
 end

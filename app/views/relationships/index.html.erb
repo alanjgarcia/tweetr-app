@@ -1,0 +1,8 @@
+<h1>All relationship</h1>
+<% @relationships.each do |relationship| %>
+  <h2><%= relationship%></h2>
+  <p>follower_id: <%= relationship.follower.name %></p>
+  <p>leader_id: <%= relationship.leader.name %></p>
+
+<% end %>
+ <a href="/relationships/new">New relationship</a>
