@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
+  resources :relationships
+  # jbhhyb
 end
