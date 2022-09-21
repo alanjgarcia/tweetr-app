@@ -1,0 +1,8 @@
+<h1>All tweets</h1>
+<% @tweets.each do |tweet| %>
+  <h2><%= tweet %></h2>
+  <p>user: <%= tweet.user.name%></p>
+  <p>text: <%= tweet.text %></p>
+  <p>image: <%= tweet.image %></p>
+<% end %>
+<%= link_to "New tweet", new_tweet_path %>

@@ -4,6 +4,17 @@ class UsersController < ApplicationController
     render template: "users/new"
   end
 
+  def index
+    @users = User.all
+    render template: "users/index"
+  end
+end
+
+  def show
+    @user = User.find_by(id: params[:id])
+    render template: "users/show"
+  end
+
   def create
     @user = User.new(
       name: params[:user][:name],
